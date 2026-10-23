@@ -1,0 +1,152 @@
+:root {
+  --cream: #fff7ee;
+  --green: #3f6248;
+  --orange: #e2733a;
+  --lavender: #b39bcf;
+  --serif: "DM Serif Display", Georgia, serif;
+  --sans: "Inter", system-ui, sans-serif;
+  --body: "Lato", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--cream);
+  color: var(--green);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+}
+a { color: inherit; }
+
+/* Nav */
+.nav {
+  position: absolute;
+  top: 28px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px 40px;
+  padding: 18px 36px;
+  width: fit-content;
+  max-width: calc(100% - 32px);
+  border-radius: 999px;
+  background: rgba(245, 240, 235, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.nav a {
+  font-family: var(--sans);
+  font-size: 18px;
+  color: var(--orange);
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 1.5px solid transparent;
+}
+.nav a:hover, .nav a[aria-current="page"] { border-bottom-color: var(--orange); }
+.page .nav { position: relative; top: 0; margin: 28px auto 0; background: rgba(226, 115, 58, 0.08); }
+
+/* Hero */
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 560px;
+  background: url("images/hero.webp") center 6% / cover no-repeat;
+}
+.monogram {
+  position: absolute;
+  left: 26%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  color: var(--lavender);
+  font-family: var(--serif);
+  font-size: 190px;
+  line-height: 1;
+  pointer-events: none;
+}
+.monogram .f { position: absolute; left: 30px; top: 0; }
+.monogram .m { position: absolute; right: -10px; bottom: 0; font-size: 150px; }
+.monogram .slash {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 4px;
+  height: 200px;
+  background: var(--lavender);
+  transform: translate(-50%, -50%) rotate(24deg);
+}
+
+/* Details */
+.details {
+  text-align: center;
+  padding: 120px 16px 80px;
+}
+.date { font-size: 64px; line-height: 1.15; margin: 0; font-weight: 400; }
+.place { font-size: 40px; margin: 16px 0 0; font-weight: 400; }
+.countdown { font-size: 28px; margin: 80px 0 0; }
+.welcome { font-size: 24px; margin: 140px auto 0; max-width: 640px; }
+
+/* Inner pages */
+.page main { max-width: 760px; margin: 0 auto; padding: 80px 16px; text-align: center; }
+.page h1 { font-size: 52px; font-weight: 400; margin: 0 0 24px; }
+.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+.gallery img { width: 100%; display: block; border-radius: 4px; }
+
+footer { text-align: center; padding: 40px 16px 60px; font-size: 16px; opacity: 0.8; }
+
+@media (max-width: 700px) {
+  .nav { gap: 4px 20px; padding: 12px 20px; border-radius: 24px; }
+  .nav a { font-size: 15px; }
+  .monogram { left: 50%; top: 80%; width: 200px; height: 200px; font-size: 126px; }
+  .monogram .f { left: 20px; }
+  .monogram .m { font-size: 100px; }
+  .monogram .slash { height: 134px; width: 3px; }
+  .date { font-size: 38px; }
+  .place { font-size: 26px; }
+  .countdown { font-size: 22px; margin-top: 56px; }
+  .welcome { font-size: 20px; margin-top: 80px; }
+  .page h1 { font-size: 38px; }
+}
+
+/* Password gate */
+.locked body > *:not(.gate) { display: none !important; }
+.gate {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: var(--cream);
+}
+.gate form { display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center; }
+.gate-mono { font-family: var(--serif); font-size: 72px; color: var(--lavender); margin: 0 0 8px; line-height: 1; }
+.gate input {
+  font: inherit;
+  width: 260px;
+  max-width: 100%;
+  padding: 10px 16px;
+  border: 1.5px solid var(--green);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--green);
+  text-align: center;
+}
+.gate button {
+  font-family: var(--sans);
+  font-size: 16px;
+  padding: 10px 28px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--orange);
+  color: #fff;
+  cursor: pointer;
+}
+.gate-err { color: #b3402a; margin: 0; font-size: 16px; }
