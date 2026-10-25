@@ -90,13 +90,39 @@ a { color: inherit; }
 .date { font-size: 64px; line-height: 1.15; margin: 0; font-weight: 400; }
 .place { font-size: 40px; margin: 16px 0 0; font-weight: 400; }
 .countdown { font-size: 28px; margin: 80px 0 0; }
-.welcome { font-size: 24px; margin: 140px auto 0; max-width: 640px; }
+.welcome { font-size: 24px; margin: 100px auto 0; max-width: 640px; }
 
 /* Inner pages */
 .page main { max-width: 760px; margin: 0 auto; padding: 80px 16px; text-align: center; }
 .page h1 { font-size: 52px; font-weight: 400; margin: 0 0 24px; }
-.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
-.gallery img { width: 100%; display: block; border-radius: 4px; }
+.page main:has(.gallery) { max-width: 1200px; }
+.gallery { columns: 3 300px; column-gap: 16px; }
+.gallery img { width: 100%; display: block; margin-bottom: 16px; border-radius: 4px; break-inside: avoid; }
+
+/* Scattered photos */
+.page-hero {
+  position: relative;
+  height: 72vh;
+  min-height: 420px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.page-hero h1 {
+  color: #fff;
+  font-family: var(--serif);
+  font-size: 72px;
+  margin: 0 0 56px;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.35);
+}
+.page-hero .nav { position: absolute; top: 28px; margin: 0 auto; background: rgba(245, 240, 235, 0.75); }
+.portrait { display: block; width: 100%; max-width: 440px; margin: 48px auto 0; border-radius: 4px; transform: rotate(-1.5deg); }
+.home-wide { display: block; width: 100%; max-width: 1100px; margin: 120px auto 0; border-radius: 4px; }
+.trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 1100px; margin: 120px auto 0; align-items: start; }
+.trio img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 4px; }
+.trio img:nth-child(2) { margin-top: 60px; }
 
 footer { text-align: center; padding: 40px 16px 60px; font-size: 16px; opacity: 0.8; }
 
@@ -112,6 +138,12 @@ footer { text-align: center; padding: 40px 16px 60px; font-size: 16px; opacity: 
   .countdown { font-size: 22px; margin-top: 56px; }
   .welcome { font-size: 20px; margin-top: 80px; }
   .page h1 { font-size: 38px; }
+  .page-hero { height: 60vh; }
+  .page-hero h1 { font-size: 48px; margin-bottom: 36px; }
+  .home-wide { margin-top: 64px; }
+  .trio { grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 64px; }
+  .trio img:nth-child(2) { margin-top: 32px; }
+  .trio img:nth-child(3) { grid-column: 1 / -1; aspect-ratio: 4 / 3; object-position: center 40%; }
 }
 
 /* Password gate */
