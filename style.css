@@ -99,6 +99,14 @@ a { color: inherit; }
 .gallery { columns: 3 300px; column-gap: 16px; }
 .gallery img { width: 100%; display: block; margin-bottom: 16px; border-radius: 4px; break-inside: avoid; }
 
+.page h2 { font-family: var(--serif); font-weight: 400; font-size: 32px; margin: 40px 0 8px; }
+.page main p { margin: 8px 0; }
+.tbd { opacity: 0.7; font-style: italic; }
+.days { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.days h2 { margin-top: 0; }
+.qa { margin: 0; }
+.qa dt { font-family: var(--serif); font-size: 28px; padding: 20px 0; border-bottom: 1px solid rgba(63, 98, 72, 0.2); }
+
 /* Scattered photos */
 .page-hero {
   position: relative;
@@ -139,6 +147,8 @@ footer { text-align: center; padding: 40px 16px 60px; font-size: 16px; opacity: 
   .welcome { font-size: 20px; margin-top: 80px; }
   .page h1 { font-size: 38px; }
   .page-hero { height: 60vh; }
+  .days { grid-template-columns: 1fr; gap: 8px; }
+  .qa dt { font-size: 22px; }
   .page-hero h1 { font-size: 48px; margin-bottom: 36px; }
   .home-wide { margin-top: 64px; }
   .trio { grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 64px; }
