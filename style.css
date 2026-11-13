@@ -55,12 +55,12 @@ a { color: inherit; }
   position: relative;
   height: 100vh;
   min-height: 560px;
-  background: url("images/hero.webp") center 6% / cover no-repeat;
+  background: url("images/hero-field.webp") center 38% / cover no-repeat;
 }
 .monogram {
   position: absolute;
-  left: 26%;
-  top: 70%;
+  left: 13%;
+  top: 62%;
   transform: translate(-50%, -50%);
   width: 300px;
   height: 300px;
@@ -138,7 +138,7 @@ footer { text-align: center; padding: 40px 16px 60px; font-size: 16px; opacity: 
 @media (max-width: 700px) {
   .nav { gap: 4px 20px; padding: 12px 20px; border-radius: 24px; }
   .nav a { font-size: 15px; }
-  .monogram { left: 50%; top: 80%; width: 200px; height: 200px; font-size: 126px; }
+  .monogram { left: 50%; top: 84%; width: 200px; height: 200px; font-size: 126px; }
   .monogram .f { left: 20px; }
   .monogram .m { font-size: 100px; }
   .monogram .slash { height: 134px; width: 3px; }
