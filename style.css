@@ -5,7 +5,8 @@
   --plum: #6b2f5b;
   --serif: "DM Serif Display", Georgia, serif;
   --sans: "Inter", system-ui, sans-serif;
-  --body: "Lato", system-ui, sans-serif;
+  --body: "EB Garamond", Georgia, serif;
+  --display: "Cinzel", Georgia, serif;
 }
 
 * { box-sizing: border-box; }
@@ -14,7 +15,7 @@ body {
   background: var(--cream);
   color: var(--green);
   font-family: var(--body);
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.6;
 }
 a { color: inherit; }
@@ -40,8 +41,9 @@ a { color: inherit; }
   -webkit-backdrop-filter: blur(10px);
 }
 .nav a {
-  font-family: var(--sans);
-  font-size: 18px;
+  font-family: var(--display);
+  font-size: 16px;
+  letter-spacing: 0.06em;
   color: var(--orange);
   text-decoration: none;
   padding-bottom: 2px;
@@ -87,8 +89,8 @@ a { color: inherit; }
   text-align: center;
   padding: 120px 16px 80px;
 }
-.date { font-size: 64px; line-height: 1.15; margin: 0; font-weight: 400; }
-.place { font-size: 40px; margin: 16px 0 0; font-weight: 400; }
+.date { font-family: var(--display); font-size: 52px; line-height: 1.2; margin: 0; font-weight: 400; letter-spacing: 0.03em; }
+.place { font-family: var(--display); font-size: 30px; margin: 16px 0 0; font-weight: 400; letter-spacing: 0.04em; }
 .countdown { font-size: 28px; margin: 80px 0 0; }
 .welcome { font-size: 24px; margin: 100px auto 0; max-width: 640px; }
 
@@ -99,7 +101,7 @@ a { color: inherit; }
 .gallery { columns: 3 300px; column-gap: 16px; }
 .gallery img { width: 100%; display: block; margin-bottom: 16px; border-radius: 4px; break-inside: avoid; }
 
-.page h2 { font-family: var(--serif); font-weight: 400; font-size: 32px; margin: 40px 0 8px; }
+.page h2 { font-family: var(--display); font-weight: 400; font-size: 28px; letter-spacing: 0.04em; margin: 40px 0 8px; }
 .page main p { margin: 8px 0; }
 .lede { font-size: 22px; margin-bottom: 40px !important; }
 .tbd { opacity: 0.7; font-style: italic; }
@@ -121,7 +123,9 @@ a { color: inherit; }
 }
 .page-hero h1 {
   color: #fff;
-  font-family: var(--serif);
+  font-family: var(--display);
+  font-weight: 500;
+  letter-spacing: 0.04em;
   font-size: 72px;
   margin: 0 0 56px;
   text-shadow: 0 2px 24px rgba(0, 0, 0, 0.35);
@@ -138,20 +142,20 @@ footer { text-align: center; padding: 40px 16px 60px; font-size: 16px; opacity: 
 
 @media (max-width: 700px) {
   .nav { gap: 4px 20px; padding: 12px 20px; border-radius: 24px; }
-  .nav a { font-size: 15px; }
+  .nav a { font-size: 13px; }
   .monogram { left: 50%; top: 84%; width: 200px; height: 200px; font-size: 126px; }
   .monogram .f { left: 20px; }
   .monogram .m { font-size: 100px; }
   .monogram .slash { height: 134px; width: 3px; }
-  .date { font-size: 38px; }
-  .place { font-size: 26px; }
+  .date { font-size: 30px; }
+  .place { font-size: 20px; }
   .countdown { font-size: 22px; margin-top: 56px; }
   .welcome { font-size: 20px; margin-top: 80px; }
   .page h1 { font-size: 38px; }
   .page-hero { height: 60vh; }
   .days { grid-template-columns: 1fr; gap: 8px; }
   .qa dt { font-size: 22px; }
-  .page-hero h1 { font-size: 48px; margin-bottom: 36px; }
+  .page-hero h1 { font-size: 40px; margin-bottom: 36px; }
   .home-wide { margin-top: 64px; }
   .trio { grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 64px; }
   .trio img:nth-child(2) { margin-top: 32px; }
