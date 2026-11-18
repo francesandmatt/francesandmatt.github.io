@@ -89,8 +89,8 @@ a { color: inherit; }
 .details {
   text-align: center;
   padding: 120px 16px 80px;
-  background: var(--green);
-  color: #fff;
+  background: var(--cream);
+  color: var(--green);
 }
 .date { font-family: var(--display); font-size: 52px; line-height: 1.2; margin: 0; font-weight: 400; letter-spacing: 0.03em; }
 .place { font-family: var(--display); font-size: 30px; margin: 16px 0 0; font-weight: 400; letter-spacing: 0.04em; }
