@@ -102,6 +102,13 @@ a { color: inherit; }
   transform: translate(-50%, -50%) rotate(24deg);
 }
 
+/* Home page lower section */
+body:not(.page) .details,
+body:not(.page) footer {
+  background: var(--green);
+  color: #fff;
+}
+
 /* Details */
 .details {
   text-align: center;
