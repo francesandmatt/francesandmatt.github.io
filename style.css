@@ -65,9 +65,8 @@ a { color: inherit; }
 }
 .monogram {
   position: absolute;
-  left: 17%;
-  top: 62%;
-  transform: translate(-50%, -50%);
+  left: 48px;
+  bottom: 40px;
   display: flex;
   align-items: baseline;
   gap: 0.14em;
@@ -75,7 +74,7 @@ a { color: inherit; }
   font-family: var(--serif);
   font-style: italic;
   font-weight: 500;
-  font-size: 150px;
+  font-size: 72px;
   line-height: 1;
   white-space: nowrap;
   pointer-events: none;
@@ -91,13 +90,12 @@ a { color: inherit; }
 }
 .date { font-family: var(--display); font-size: 48px; line-height: 1.3; margin: 0; font-weight: 400; text-transform: uppercase; letter-spacing: 0.14em; }
 .place { font-family: var(--display); font-size: 21px; margin: 16px 0 0; font-weight: 400; text-transform: uppercase; letter-spacing: 0.14em; }
-.letusknow { max-width: 900px; margin: 64px auto 0; padding: 40px 28px; background: var(--blush); border-radius: 6px; }
-.letusknow h2 { font-family: var(--display); font-weight: 400; font-size: 28px; text-transform: uppercase; letter-spacing: 0.14em; margin: 0 0 12px; }
+.letusknow { max-width: 720px; margin: 72px auto 0; padding: 40px 0; border-top: 1px solid rgba(62, 90, 71, 0.25); border-bottom: 1px solid rgba(62, 90, 71, 0.25); }
+.letusknow h2 { font-family: var(--display); font-weight: 400; font-size: 32px; margin: 0 0 12px; }
 .letusknow p { margin: 0 0 24px; }
-.button { display: inline-block; font-family: var(--display); font-size: 15px; text-transform: uppercase; letter-spacing: 0.14em; padding: 12px 32px; border-radius: 999px; background: var(--plum); color: #fff; text-decoration: none; }
-.button:hover { opacity: 0.9; }
+.button { display: inline-block; font-family: var(--display); font-size: 15px; text-transform: uppercase; letter-spacing: 0.14em; padding: 12px 32px; border: 1px solid var(--plum); background: transparent; color: var(--plum); text-decoration: none; transition: background .2s, color .2s; }
+.button:hover { background: var(--plum); color: #fff; }
 .weekend { font-size: 21px; margin: 24px 0 0; }
-.countdown { font-size: 24px; margin: 48px 0 0; }
 .welcome { font-size: 24px; margin: 100px auto 0; max-width: 900px; }
 
 /* Inner pages */
@@ -105,7 +103,7 @@ a { color: inherit; }
 .page h1 { font-size: 52px; font-weight: 400; margin: 0 0 24px; }
 .page main:has(.gallery) { max-width: 1200px; }
 .gallery { columns: 3 300px; column-gap: 16px; }
-.gallery img { width: 100%; display: block; margin-bottom: 16px; border-radius: 4px; break-inside: avoid; }
+.gallery img { width: 100%; display: block; margin-bottom: 16px; break-inside: avoid; }
 
 .page h2 { font-family: var(--display); font-weight: 400; font-size: 26px; text-transform: uppercase; letter-spacing: 0.14em; margin: 40px 0 8px; }
 .page main p { margin: 8px 0; }
@@ -116,7 +114,7 @@ a { color: inherit; }
 .days { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; }
 .days h2 { margin-top: 0; }
 .qa { max-width: 1000px; margin: 0 auto 40px; text-align: left; }
-.qa dt { font-family: var(--display); font-size: 19px; text-transform: uppercase; letter-spacing: 0.14em; padding-top: 28px; }
+.qa dt { font-family: var(--display); font-size: 23px; padding-top: 28px; }
 .qa dd { margin: 8px 0 0; padding-bottom: 28px; border-bottom: 1px solid rgba(63, 98, 72, 0.2); }
 
 /* Scattered photos */
@@ -140,15 +138,18 @@ a { color: inherit; }
   letter-spacing: 0.16em;
   font-size: 68px;
   margin: 0 0 56px;
-  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.35);
+  position: relative;
+  z-index: 1;
 }
+.page-hero::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 45%; background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.28)); pointer-events: none; }
+.page-hero.title-sky::after { display: none; }
 .page-hero.title-sky { align-items: center; }
-.page-hero.title-sky h1 { margin: 0 0 12vh; color: var(--plum); text-shadow: none; }
+.page-hero.title-sky h1 { margin: 0 0 12vh; color: var(--plum); }
 .page-hero .nav { position: absolute; top: 28px; margin: 0 auto; background: rgba(245, 240, 235, 0.75); }
-.portrait { display: block; width: 100%; max-width: 440px; margin: 48px auto 0; border-radius: 4px; transform: rotate(-1.5deg); }
-.home-wide { display: block; width: 100%; max-width: 1400px; margin: 120px auto 0; border-radius: 4px; }
+.portrait { display: block; width: 100%; max-width: 440px; margin: 48px auto 0; transform: rotate(-1.5deg); }
+.home-wide { display: block; width: 100%; max-width: 1400px; margin: 120px auto 0; }
 .trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; max-width: 1400px; margin: 120px auto 0; align-items: start; }
-.trio img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 4px; }
+.trio img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; }
 .trio img:nth-child(2) { margin-top: 0; }
 .page-trio { margin: 0 auto 64px; padding: 0 48px; }
 
@@ -160,21 +161,20 @@ footer { display: none; }
   .details { padding: 96px 16px 64px; }
   body { font-size: 19px; }
   .page h2 { font-size: 20px; }
-  .letusknow h2 { font-size: 22px; }
+  .letusknow h2 { font-size: 26px; }
   .button { font-size: 14px; }
   .lede { font-size: 20px; }
   .weekend { font-size: 19px; }
   .nav { gap: 4px 14px; padding: 12px 18px; border-radius: 24px; }
   .nav a { font-size: 12px; letter-spacing: 0.12em; }
-  .monogram { left: 50%; top: 91%; font-size: 84px; }
+  .monogram { left: auto; right: 20px; bottom: 24px; font-size: 52px; }
   .date { font-size: 21px; letter-spacing: 0.1em; }
   .place { font-size: 15px; }
-  .countdown { font-size: 20px; margin-top: 56px; }
   .welcome { font-size: 20px; margin-top: 80px; }
   .page h1 { font-size: 38px; }
   .page-hero { height: 62vh; min-height: 420px; }
   .days { grid-template-columns: 1fr; gap: 8px; }
-  .qa dt { font-size: 15px; }
+  .qa dt { font-size: 20px; }
   .page-hero h1 { font-size: 34px; margin-bottom: 36px; }
   .home-wide { margin-top: 64px; }
   .trio { grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 64px; }

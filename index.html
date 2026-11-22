@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,500&family=Inter:wght@400&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=23">
+  <link rel="stylesheet" href="style.css?v=25">
   <script src="gate.js?v=16"></script>
 </head>
 <body>
@@ -24,10 +24,9 @@
     <h1 class="date">Saturday, July 10, 2027</h1>
     <p class="place">The Corson Building · Seattle, Washington</p>
     <p class="weekend">Join us for the weekend, July 9–11 · <a href="schedule.html">See the schedule</a></p>
-    <p class="countdown" id="countdown"></p>
     <div class="letusknow">
       <h2>Stay in the loop</h2>
-      <p>Send us your address so we know where to send your invitation, and let us know if you think you can make it!</p>
+      <p>Send us your address so we know where to send your invitation, and let us know if you think you can make it.</p>
       <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSeEMbsp-jNgenhs4YzjCdNWeoz7hKXOo0NFP6TZYEq90Qf69w/viewform" target="_blank" rel="noopener">Share your address</a>
     </div>
     <img class="home-wide" src="images/field-sunburst.jpg" alt="Frances and Matt sitting in a golden field at sunset">
@@ -38,10 +37,5 @@
       <img src="images/field-hug.jpg" alt="Matt hugging Frances from behind in a golden field">
     </div>
   </section>
-  <script>
-    const days = Math.ceil((new Date(2027, 6, 10) - new Date()) / 86400000);
-    document.getElementById("countdown").textContent =
-      days > 1 ? days + " days" : days === 1 ? "1 day" : days === 0 ? "Today!" : "";
-  </script>
 </body>
 </html>
