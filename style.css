@@ -169,37 +169,24 @@ footer { display: none; }
 
 /* Password gate */
 .locked body > *:not(.gate) { display: none !important; }
-.gate {
-  position: fixed;
-  inset: 0;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 16px;
-  background: var(--cream);
+.gate { position: fixed; inset: 0; z-index: 100; display: grid; grid-template-columns: 1fr 1fr; background: var(--cream); }
+.gate-text { display: flex; flex-direction: column; padding: 30px 56px 56px; }
+.gate-logo { font-family: var(--serif); font-style: italic; font-weight: 500; font-size: 30px; color: var(--plum); margin: 0; line-height: 1; }
+.gate-main { margin: auto 0; }
+.gate-names { font-family: var(--serif); font-style: italic; font-weight: 500; font-size: 64px; line-height: 1.05; color: var(--plum); margin: 0; }
+.gate-date { font-family: var(--display); text-transform: uppercase; letter-spacing: 0.16em; font-size: 17px; color: var(--green); margin: 20px 0 44px; }
+.gate-form { display: flex; align-items: flex-end; gap: 20px; max-width: 420px; }
+.gate-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.gate-form input { flex: 1; min-width: 0; font: inherit; font-size: 20px; background: transparent; border: 0; border-bottom: 1px solid var(--plum); border-radius: 0; color: var(--green); padding: 6px 2px; outline: none; }
+.gate-form input::placeholder { color: var(--green); opacity: 0.6; font-style: italic; }
+.gate-form button { font-family: var(--display); text-transform: uppercase; letter-spacing: 0.16em; font-size: 15px; white-space: nowrap; background: none; border: 0; color: var(--plum); padding: 6px 0; cursor: pointer; }
+.gate-err { color: #b3402a; margin: 14px 0 0; font-size: 16px; }
+.gate-photo { background: url("images/beach-lift-bodies.jpg") center 55% / cover no-repeat; }
+@media (max-width: 700px) {
+  .gate { grid-template-columns: 1fr; grid-template-rows: 46vh 1fr; }
+  .gate-photo { grid-row: 1; }
+  .gate-text { grid-row: 2; padding: 28px 20px; }
+  .gate-logo { display: none; }
+  .gate-names { font-size: 40px; }
+  .gate-date { font-size: 13px; margin: 12px 0 28px; }
 }
-.gate form { display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center; }
-.gate-mono { font-family: var(--serif); font-style: italic; font-weight: 500; font-size: 72px; color: var(--plum); margin: 0 0 8px; line-height: 1; }
-.gate input {
-  font: inherit;
-  width: 260px;
-  max-width: 100%;
-  padding: 10px 16px;
-  border: 1.5px solid var(--green);
-  border-radius: 999px;
-  background: #fff;
-  color: var(--green);
-  text-align: center;
-}
-.gate button {
-  font-family: var(--sans);
-  font-size: 16px;
-  padding: 10px 28px;
-  border: 0;
-  border-radius: 999px;
-  background: var(--plum);
-  color: #fff;
-  cursor: pointer;
-}
-.gate-err { color: #b3402a; margin: 0; font-size: 16px; }

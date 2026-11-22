@@ -14,10 +14,12 @@
     var gate = document.createElement("div");
     gate.className = "gate";
     gate.innerHTML =
-      '<form><p class="gate-mono">f &amp; m</p>' +
-      '<label for="gate-pw">Please enter the password</label>' +
-      '<input id="gate-pw" type="password" autocomplete="current-password" autofocus>' +
-      '<button type="submit">Enter</button><p class="gate-err" hidden>Incorrect password</p></form>';
+      '<div class="gate-text"><p class="gate-logo">f &amp; m</p><div class="gate-main">' +
+      '<p class="gate-names">Frances &amp; Matt</p><p class="gate-date">July 10, 2027 · Seattle</p>' +
+      '<form class="gate-form"><label class="gate-label" for="gate-pw">Password</label>' +
+      '<input id="gate-pw" type="password" placeholder="Password" autocomplete="current-password" autofocus>' +
+      '<button type="submit">Enter &rarr;</button></form>' +
+      '<p class="gate-err" hidden>Incorrect password</p></div></div><div class="gate-photo"></div>';
     document.body.appendChild(gate);
     gate.querySelector("form").addEventListener("submit", async function (e) {
       e.preventDefault();
