@@ -75,7 +75,7 @@ a { color: inherit; }
 .place { font-family: var(--display); font-size: 21px; margin: 16px 0 0; font-weight: 400; text-transform: uppercase; letter-spacing: 0.14em; }
 .letusknow { max-width: 720px; margin: 72px auto 0; padding: 40px 0; border-top: 1px solid rgba(62, 90, 71, 0.25); border-bottom: 1px solid rgba(62, 90, 71, 0.25); }
 .letusknow h2 { font-family: var(--display); font-weight: 400; font-size: 32px; margin: 0 0 12px; }
-.letusknow p { margin: 0 0 24px; }
+.letusknow p { margin: 18px 0 0; }
 .button { display: inline-block; font-family: var(--display); font-size: 15px; text-transform: uppercase; letter-spacing: 0.14em; padding: 12px 32px; border: 1px solid var(--plum); background: transparent; color: var(--plum); text-decoration: none; transition: background .2s, color .2s; }
 .button:hover { background: var(--plum); color: #fff; }
 .weekend { font-size: 21px; margin: 24px 0 0; }
