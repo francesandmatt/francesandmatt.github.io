@@ -16,7 +16,7 @@ body {
   background: var(--cream);
   color: var(--green);
   font-family: var(--body);
-  font-size: 22px;
+  font-size: 20px;
   line-height: 1.6;
 }
 a { color: inherit; }
@@ -43,7 +43,7 @@ a { color: inherit; }
 }
 .nav a {
   font-family: var(--display);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.16em;
@@ -60,7 +60,7 @@ a { color: inherit; }
   position: relative;
   height: 100vh;
   min-height: 560px;
-  background: url("images/hero-field.webp") center 38% / cover no-repeat;
+  background: url("images/hero-field.jpg") center 38% / cover no-repeat;
   border-bottom: 10px solid var(--blush);
 }
 .monogram {
@@ -75,7 +75,7 @@ a { color: inherit; }
   font-family: var(--serif);
   font-style: italic;
   font-weight: 500;
-  font-size: 170px;
+  font-size: 150px;
   line-height: 1;
   white-space: nowrap;
   pointer-events: none;
@@ -89,16 +89,16 @@ a { color: inherit; }
   background: var(--cream);
   color: var(--green);
 }
-.date { font-family: var(--display); font-size: 60px; line-height: 1.3; margin: 0; font-weight: 400; text-transform: uppercase; letter-spacing: 0.14em; }
-.place { font-family: var(--display); font-size: 26px; margin: 16px 0 0; font-weight: 400; text-transform: uppercase; letter-spacing: 0.14em; }
+.date { font-family: var(--display); font-size: 48px; line-height: 1.3; margin: 0; font-weight: 400; text-transform: uppercase; letter-spacing: 0.14em; }
+.place { font-family: var(--display); font-size: 21px; margin: 16px 0 0; font-weight: 400; text-transform: uppercase; letter-spacing: 0.14em; }
 .letusknow { max-width: 900px; margin: 64px auto 0; padding: 40px 28px; background: var(--blush); border-radius: 6px; }
-.letusknow h2 { font-family: var(--display); font-weight: 400; font-size: 34px; text-transform: uppercase; letter-spacing: 0.14em; margin: 0 0 12px; }
+.letusknow h2 { font-family: var(--display); font-weight: 400; font-size: 28px; text-transform: uppercase; letter-spacing: 0.14em; margin: 0 0 12px; }
 .letusknow p { margin: 0 0 24px; }
-.button { display: inline-block; font-family: var(--display); font-size: 17px; text-transform: uppercase; letter-spacing: 0.14em; padding: 12px 32px; border-radius: 999px; background: var(--plum); color: #fff; text-decoration: none; }
+.button { display: inline-block; font-family: var(--display); font-size: 15px; text-transform: uppercase; letter-spacing: 0.14em; padding: 12px 32px; border-radius: 999px; background: var(--plum); color: #fff; text-decoration: none; }
 .button:hover { opacity: 0.9; }
-.weekend { font-size: 24px; margin: 24px 0 0; }
-.countdown { font-size: 30px; margin: 48px 0 0; }
-.welcome { font-size: 28px; margin: 100px auto 0; max-width: 900px; }
+.weekend { font-size: 21px; margin: 24px 0 0; }
+.countdown { font-size: 24px; margin: 48px 0 0; }
+.welcome { font-size: 24px; margin: 100px auto 0; max-width: 900px; }
 
 /* Inner pages */
 .page main { max-width: 1240px; margin: 0 auto; padding: 80px 48px; text-align: center; }
@@ -107,16 +107,16 @@ a { color: inherit; }
 .gallery { columns: 3 300px; column-gap: 16px; }
 .gallery img { width: 100%; display: block; margin-bottom: 16px; border-radius: 4px; break-inside: avoid; }
 
-.page h2 { font-family: var(--display); font-weight: 400; font-size: 32px; text-transform: uppercase; letter-spacing: 0.14em; margin: 40px 0 8px; }
+.page h2 { font-family: var(--display); font-weight: 400; font-size: 26px; text-transform: uppercase; letter-spacing: 0.14em; margin: 40px 0 8px; }
 .page main p { margin: 8px 0; }
 .page main strong { font-weight: 600; }
 .days { max-width: 1200px; margin: 0 auto; }
-.lede { font-size: 26px; margin-bottom: 40px !important; }
+.lede { font-size: 22px; margin-bottom: 40px !important; }
 .tbd { opacity: 0.7; font-style: italic; }
 .days { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; }
 .days h2 { margin-top: 0; }
 .qa { max-width: 1000px; margin: 0 auto 40px; text-align: left; }
-.qa dt { font-family: var(--display); font-size: 24px; text-transform: uppercase; letter-spacing: 0.14em; padding-top: 28px; }
+.qa dt { font-family: var(--display); font-size: 19px; text-transform: uppercase; letter-spacing: 0.14em; padding-top: 28px; }
 .qa dd { margin: 8px 0 0; padding-bottom: 28px; border-bottom: 1px solid rgba(63, 98, 72, 0.2); }
 
 /* Scattered photos */
@@ -138,7 +138,7 @@ a { color: inherit; }
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.16em;
-  font-size: 88px;
+  font-size: 68px;
   margin: 0 0 56px;
   text-shadow: 0 2px 24px rgba(0, 0, 0, 0.35);
 }
@@ -158,18 +158,18 @@ footer { display: none; }
   .page main { padding: 64px 16px; }
   .page-trio { padding: 0 16px; }
   .details { padding: 96px 16px 64px; }
-  body { font-size: 21px; }
-  .page h2 { font-size: 22px; }
-  .letusknow h2 { font-size: 24px; }
+  body { font-size: 19px; }
+  .page h2 { font-size: 20px; }
+  .letusknow h2 { font-size: 22px; }
   .button { font-size: 14px; }
-  .lede { font-size: 22px; }
-  .weekend { font-size: 22px; }
+  .lede { font-size: 20px; }
+  .weekend { font-size: 19px; }
   .nav { gap: 4px 14px; padding: 12px 18px; border-radius: 24px; }
   .nav a { font-size: 12px; letter-spacing: 0.12em; }
   .monogram { left: 50%; top: 91%; font-size: 84px; }
   .date { font-size: 21px; letter-spacing: 0.1em; }
   .place { font-size: 15px; }
-  .countdown { font-size: 22px; margin-top: 56px; }
+  .countdown { font-size: 20px; margin-top: 56px; }
   .welcome { font-size: 20px; margin-top: 80px; }
   .page h1 { font-size: 38px; }
   .page-hero { height: 62vh; min-height: 420px; }
