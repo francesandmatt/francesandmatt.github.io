@@ -24,22 +24,15 @@ a { color: inherit; }
 /* Nav */
 .nav {
   position: absolute;
-  top: 28px;
+  top: 0;
   left: 0;
   right: 0;
-  margin: 0 auto;
   z-index: 10;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 6px 40px;
-  padding: 18px 36px;
-  width: fit-content;
-  max-width: calc(100% - 32px);
-  border-radius: 999px;
-  background: rgba(245, 240, 235, 0.75);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  align-items: center;
+  justify-content: flex-end;
+  gap: 36px;
+  padding: 30px 48px;
 }
 .nav a {
   font-family: var(--display);
@@ -47,15 +40,16 @@ a { color: inherit; }
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.16em;
-  color: var(--plum);
+  color: #fff;
   text-decoration: none;
   padding-bottom: 2px;
   border-bottom: 2px solid transparent;
 }
-.nav a:hover, .nav a[aria-current="page"] { border-bottom-color: var(--plum); }
+.nav a:hover, .nav a[aria-current="page"] { border-bottom-color: #fff; }
+.nav .logo { margin-right: auto; font-family: var(--serif); font-style: italic; font-weight: 500; font-size: 30px; text-transform: none; letter-spacing: 0; line-height: 1; border: 0; }
+.hero::before, .page-hero::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 160px; background: linear-gradient(rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0)); pointer-events: none; z-index: 1; }
 .page-cta { text-align: center; margin: 0 auto 72px; padding: 0 16px; }
 .page-cta a { color: var(--plum); }
-.page .nav { position: relative; top: 0; margin: 28px auto 0; background: rgba(226, 115, 58, 0.08); }
 
 /* Hero */
 .hero {
@@ -65,28 +59,15 @@ a { color: inherit; }
   background: url("images/hero-field.jpg") center 38% / cover no-repeat;
   border-bottom: 10px solid var(--blush);
 }
-.monogram {
-  position: absolute;
-  left: 48px;
-  bottom: 40px;
-  display: flex;
-  align-items: baseline;
-  gap: 0.14em;
-  color: var(--plum);
-  font-family: var(--serif);
-  font-style: italic;
-  font-weight: 500;
-  font-size: 72px;
-  line-height: 1;
-  white-space: nowrap;
-  pointer-events: none;
-}
-.monogram .amp { font-size: 0.6em; }
+.hero::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 45%; background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.35)); pointer-events: none; }
+.hero-text { position: absolute; left: 48px; bottom: 48px; z-index: 2; color: #fff; }
+.hero-date { font-family: var(--display); font-weight: 400; text-transform: uppercase; letter-spacing: 0.14em; font-size: 44px; line-height: 1.15; margin: 0; }
+.hero-place { font-family: var(--display); text-transform: uppercase; letter-spacing: 0.16em; font-size: 18px; margin: 12px 0 0; }
 
 /* Details */
 .details {
   text-align: center;
-  padding: 120px 48px 80px;
+  padding: 72px 48px 80px;
   background: var(--cream);
   color: var(--green);
 }
@@ -147,7 +128,6 @@ a { color: inherit; }
 .page-hero.title-sky::after { display: none; }
 .page-hero.title-sky { align-items: center; }
 .page-hero.title-sky h1 { margin: 0 0 12vh; color: var(--plum); }
-.page-hero .nav { position: absolute; top: 28px; margin: 0 auto; background: rgba(245, 240, 235, 0.75); }
 .portrait { display: block; width: 100%; max-width: 440px; margin: 48px auto 0; transform: rotate(-1.5deg); }
 .home-wide { display: block; width: 100%; max-width: 1400px; margin: 120px auto 0; }
 .trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; max-width: 1400px; margin: 120px auto 0; align-items: start; }
@@ -160,16 +140,19 @@ footer { display: none; }
 @media (max-width: 700px) {
   .page main { padding: 64px 16px; }
   .page-trio { padding: 0 16px; }
-  .details { padding: 96px 16px 64px; }
+  .details { padding: 48px 16px 64px; }
   body { font-size: 19px; }
   .page h2 { font-size: 20px; }
   .letusknow h2 { font-size: 26px; }
   .button { font-size: 14px; }
   .lede { font-size: 20px; }
   .weekend { font-size: 19px; }
-  .nav { gap: 4px 14px; padding: 12px 18px; border-radius: 24px; }
-  .nav a { font-size: 12px; letter-spacing: 0.12em; }
-  .monogram { left: auto; right: 20px; bottom: 24px; font-size: 52px; }
+  .nav { gap: 12px; padding: 18px 18px; }
+  .nav a { font-size: 11px; letter-spacing: 0.1em; }
+  .nav .logo { font-size: 22px; }
+  .hero-text { left: 20px; right: 20px; bottom: 28px; }
+  .hero-date { font-size: 20px; letter-spacing: 0.08em; }
+  .hero-place { font-size: 12px; margin-top: 8px; }
   .date { font-size: 21px; letter-spacing: 0.1em; }
   .place { font-size: 15px; }
   .welcome { font-size: 20px; margin-top: 80px; }
