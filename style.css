@@ -53,9 +53,6 @@ a { color: inherit; }
   border-bottom: 2px solid transparent;
 }
 .nav a:hover, .nav a[aria-current="page"] { border-bottom-color: var(--plum); }
-.nav .nav-cta { border: 1px solid var(--plum); padding: 2px 12px; margin-left: 4px; }
-.nav .nav-cta:hover { background: var(--plum); color: #fff; border-bottom-color: var(--plum); }
-.nav-cta .short { display: none; }
 .page-cta { text-align: center; margin: 0 auto 72px; padding: 0 16px; }
 .page-cta a { color: var(--plum); }
 .page .nav { position: relative; top: 0; margin: 28px auto 0; background: rgba(226, 115, 58, 0.08); }
@@ -170,11 +167,8 @@ footer { display: none; }
   .button { font-size: 14px; }
   .lede { font-size: 20px; }
   .weekend { font-size: 19px; }
-  .nav { gap: 4px 10px; padding: 12px 14px; border-radius: 24px; flex-wrap: nowrap; }
-  .nav a { font-size: 11px; letter-spacing: 0.08em; }
-  .nav .nav-cta { padding: 1px 8px; margin-left: 0; }
-  .nav-cta .full { display: none; }
-  .nav-cta .short { display: inline; }
+  .nav { gap: 4px 14px; padding: 12px 18px; border-radius: 24px; }
+  .nav a { font-size: 12px; letter-spacing: 0.12em; }
   .monogram { left: auto; right: 20px; bottom: 24px; font-size: 52px; }
   .date { font-size: 21px; letter-spacing: 0.1em; }
   .place { font-size: 15px; }
