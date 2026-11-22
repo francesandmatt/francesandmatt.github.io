@@ -14,7 +14,7 @@
     var gate = document.createElement("div");
     gate.className = "gate";
     gate.innerHTML =
-      '<form><p class="gate-mono">f / m</p>' +
+      '<form><p class="gate-mono">f &amp; m</p>' +
       '<label for="gate-pw">Please enter the password</label>' +
       '<input id="gate-pw" type="password" autocomplete="current-password" autofocus>' +
       '<button type="submit">Enter</button><p class="gate-err" hidden>Incorrect password</p></form>';
