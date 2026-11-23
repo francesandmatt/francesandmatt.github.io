@@ -169,24 +169,25 @@ footer { display: none; }
 
 /* Password gate */
 .locked body > *:not(.gate) { display: none !important; }
-.gate { position: fixed; inset: 0; z-index: 100; display: grid; grid-template-columns: 1fr 1fr; background: var(--cream); }
-.gate-text { display: flex; flex-direction: column; padding: 30px 56px 56px; }
-.gate-logo { font-family: var(--serif); font-style: italic; font-weight: 500; font-size: 30px; color: var(--plum); margin: 0; line-height: 1; }
-.gate-main { margin: auto 0; }
-.gate-names { font-family: var(--serif); font-style: italic; font-weight: 500; font-size: 64px; line-height: 1.05; color: var(--plum); margin: 0; }
-.gate-date { font-family: var(--display); text-transform: uppercase; letter-spacing: 0.16em; font-size: 17px; color: var(--green); margin: 20px 0 44px; }
-.gate-form { display: flex; align-items: flex-end; gap: 20px; max-width: 420px; }
+.gate { position: fixed; inset: 0; z-index: 100; display: grid; grid-template-rows: 62vh 1fr; background: var(--cream); }
+.gate-photo { background: url("images/beach-lift-bodies.jpg") center 88% / cover no-repeat; }
+.gate-text { display: flex; align-items: center; padding: 28px 56px 36px; }
+.gate-logo { display: none; }
+.gate-main { flex: 1; display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; }
+.gate-names { font-family: var(--serif); font-style: italic; font-weight: 500; font-size: 56px; line-height: 1.05; color: var(--plum); margin: 0; }
+.gate-date { font-family: var(--display); text-transform: uppercase; letter-spacing: 0.16em; font-size: 17px; color: var(--green); margin: 12px 0 0; }
+.gate-form { display: flex; align-items: flex-end; gap: 20px; width: 400px; max-width: 100%; margin-bottom: 6px; }
 .gate-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 .gate-form input { flex: 1; min-width: 0; font: inherit; font-size: 20px; background: transparent; border: 0; border-bottom: 1px solid var(--plum); border-radius: 0; color: var(--green); padding: 6px 2px; outline: none; }
 .gate-form input::placeholder { color: var(--green); opacity: 0.6; font-style: italic; }
 .gate-form button { font-family: var(--display); text-transform: uppercase; letter-spacing: 0.16em; font-size: 15px; white-space: nowrap; background: none; border: 0; color: var(--plum); padding: 6px 0; cursor: pointer; }
-.gate-err { color: #b3402a; margin: 14px 0 0; font-size: 16px; }
-.gate-photo { background: url("images/beach-lift-bodies.jpg") center / contain no-repeat; margin: 56px 56px 56px 0; }
+.gate-err { color: #b3402a; margin: 10px 0 0; font-size: 16px; }
 @media (max-width: 700px) {
-  .gate { grid-template-columns: 1fr; grid-template-rows: 46vh 1fr; }
-  .gate-photo { grid-row: 1; margin: 0; background-size: cover; background-position: 62% center; }
-  .gate-text { grid-row: 2; padding: 28px 20px; }
-  .gate-logo { display: none; }
+  .gate { grid-template-rows: 46vh 1fr; }
+  .gate-photo { background-position: 60% center; }
+  .gate-text { align-items: center; padding: 28px 20px; }
+  .gate-main { display: block; }
   .gate-names { font-size: 40px; }
   .gate-date { font-size: 13px; margin: 12px 0 28px; }
+  .gate-form { width: 100%; }
 }
