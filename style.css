@@ -134,12 +134,15 @@ a { color: inherit; }
 .trio img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; }
 .trio img:nth-child(2) { margin-top: 0; }
 .page-trio { margin: 0 auto 64px; padding: 0 48px; }
+.page-wide { max-width: 1400px; margin: 120px auto 64px; padding: 0 48px; }
+.page-wide img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
 
 footer { display: none; }
 
 @media (max-width: 700px) {
   .page main { padding: 64px 16px; }
   .page-trio { padding: 0 16px; }
+  .page-wide { padding: 0 16px; margin-top: 64px; }
   .details { padding: 48px 16px 64px; }
   body { font-size: 19px; }
   .page h2 { font-size: 20px; }
