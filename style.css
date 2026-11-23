@@ -94,7 +94,7 @@ a { color: inherit; }
 .days { max-width: 1200px; margin: 0 auto; }
 .lede { font-size: 22px; margin-bottom: 40px !important; }
 .tbd { opacity: 0.7; font-style: italic; }
-.days { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; }
+.days { display: grid; grid-template-columns: repeat(3, 1fr); gap: 72px; }
 .days h2 { margin-top: 0; }
 .qa { max-width: 1000px; margin: 0 auto 40px; text-align: left; }
 .qa dt { font-family: var(--display); font-size: 23px; padding-top: 28px; }
@@ -161,7 +161,7 @@ footer { display: none; }
   .welcome { font-size: 19px; }
   .page h1 { font-size: 38px; }
   .page-hero { height: 62vh; min-height: 420px; }
-  .days { grid-template-columns: 1fr; gap: 8px; }
+  .days { grid-template-columns: 1fr; gap: 36px; }
   .qa dt { font-size: 20px; }
   .page-hero h1 { font-size: 34px; margin-bottom: 36px; }
   .home-wide { margin-top: 64px; }
