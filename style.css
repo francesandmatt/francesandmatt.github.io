@@ -78,8 +78,8 @@ a { color: inherit; }
 .letusknow p { margin: 18px 0 0; }
 .button { display: inline-block; font-family: var(--display); font-size: 15px; text-transform: uppercase; letter-spacing: 0.14em; padding: 12px 32px; border: 1px solid var(--plum); background: transparent; color: var(--plum); text-decoration: none; transition: background .2s, color .2s; }
 .button:hover { background: var(--plum); color: #fff; }
-.weekend { font-size: 21px; margin: 24px 0 0; }
-.welcome { font-size: 24px; margin: 100px auto 0; max-width: 900px; }
+.weekend { font-size: 21px; margin: 14px 0 0; }
+.welcome { font-size: 24px; margin: 0 auto; max-width: 900px; }
 
 /* Inner pages */
 .page main { max-width: 1240px; margin: 0 auto; padding: 80px 48px; text-align: center; }
@@ -155,7 +155,7 @@ footer { display: none; }
   .hero-place { font-size: 12px; margin-top: 8px; }
   .date { font-size: 21px; letter-spacing: 0.1em; }
   .place { font-size: 15px; }
-  .welcome { font-size: 20px; margin-top: 80px; }
+  .welcome { font-size: 20px; }
   .page h1 { font-size: 38px; }
   .page-hero { height: 62vh; min-height: 420px; }
   .days { grid-template-columns: 1fr; gap: 8px; }
